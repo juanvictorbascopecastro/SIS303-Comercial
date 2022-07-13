@@ -26,7 +26,7 @@
                         <button type="button" class="btn btn-primary" id="btnAdd">Nuevo Producto</button>
                     </div>
                 </div>		
-                <div class="row mt-0" id="productos-list">
+                <div class="row mt-0" id="productos-list" style="overflow-y: visible;">
                     <div class="col-md-12 text-center">
                         <b>¡No hay registros!</b>
                     </div>
@@ -43,7 +43,7 @@
         <!--footer start-->
         <footer class="site-footer">
             <div class="text-center">
-                2022 - Mauricio Felix Delgado Roca
+                2022 - SIS303
                 <a href="#" class="go-top">
                     <i class="fa fa-angle-up"></i>
                 </a>

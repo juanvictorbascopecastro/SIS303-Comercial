@@ -65,6 +65,17 @@ var index = (function(window, document){
                 cancelButtonText: 'ACEPTAR'
             });
         },
+        showImage: function(img, name){
+            Swal.fire({
+                title: name,
+                //text: 'Modal with a custom image.',
+                imageUrl: img,
+                width: 500,
+                imageWidth: 500,
+                imageHeight: 500,
+                imageAlt: 'Custom image',
+              })
+        },
 
         msjCompletado: function(msj){
             Swal.fire({

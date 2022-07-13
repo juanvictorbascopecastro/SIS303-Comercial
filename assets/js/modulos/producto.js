@@ -92,7 +92,7 @@ var productos = (function(window, document){
                         let html = '';
                         this_.list_productos = objData;
                         for(let i = 0; i < objData.length; i++){
-                            html = html+`<div class="col-lg-4 col-md-4 col-sm-4 mb">
+                            html = html+`<div class="col-lg-3 col-md-4 col-sm-4 mb">
                                             <div class="content-panel pn">
                                                 <div id="spotify" style="background: url(${objData[i].imagen}) no-repeat center top;">
                                                     <div class="col-xs-3 col-xs-offset-8">
@@ -102,6 +102,7 @@ var productos = (function(window, document){
                                                         <b>${objData[i].nombre}</b>
                                                     </div>
                                                     <div class="play">
+                                                        <button class="btn btn-sm btn-success" onclick="index.showImage('${objData[i].imagen}', '${objData[i].nombre}')"><i class="fa fa-image"></i></button>
                                                         <button class="btn btn-sm btn-info" prod="${objData[i].idproducto}" onclick="productos.editarProducto(this)"><i class="fa fa-pencil"></i></button>
                                                         <button class="btn btn-sm btn-danger" prod="${objData[i].idproducto}" onclick="productos.eliminarProducto(this)"><i class="fa fa-trash-o"></i></button>
                                                     </div>
@@ -120,6 +121,7 @@ var productos = (function(window, document){
                 }
             }
         },
+
         imagen: null,
         selectArchivo: function(event){
             if (event.target.files[0].type === 'image/jpeg' || event.target.files[0].type === 'image/jpg' || event.target.files[0].type === 'image/png') {
